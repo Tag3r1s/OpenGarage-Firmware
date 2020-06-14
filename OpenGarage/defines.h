@@ -112,7 +112,8 @@ enum {
 #define DOOR_STATUS_JUST_CLOSED   3
 #define DOOR_STATUS_MIXED         4
 
-typedef enum {
+typedef enum
+{
   OPTION_FWV = 0, // firmware version
   OPTION_MNT,     // mount type
   OPTION_DTH,     // distance threshold door
@@ -124,8 +125,8 @@ typedef enum {
   OPTION_TSN,     // temperature sensor type
   OPTION_HTP,     // http port
   OPTION_CDT,     // click delay time
-  OPTION_DRI,			// distance read interval
-  OPTION_STO,			// sensor timeout option
+  OPTION_DRI,     // distance read interval
+  OPTION_STO,     // sensor timeout option
   OPTION_MOD,     // mode
   OPTION_ATI,     // automation interval (in minutes)
   OPTION_ATO,     // automation options
@@ -142,6 +143,7 @@ typedef enum {
   OPTION_NAME,    // device name
   OPTION_IFTT,    // IFTTT token
   OPTION_MQTT,    // MQTT IP
+  OPTION_FING,    // MQTTS fingerprint
   OPTION_DVIP,    // device IP
   OPTION_GWIP,    // gateway IP
   OPTION_SUBN,    // subnet

@@ -366,6 +366,7 @@ const char sta_options_html[] PROGMEM = R"(<head><title>OpenGarage</title><meta 
 <tr><td><b>Blynk Port:</b></td><td><input type='text' size=5 maxlength=5 id='bprt' data-mini='true' value=0></td></tr>
 <tr><td><b>IFTTT Key:</b></td><td><input type='text' size=20 maxlength=64 id='iftt' data-mini='true' value='-'></td></tr>
 <tr><td><b>MQTT Server:</b></td><td><input type='text' size=16 maxlength=20 id='mqtt' data-mini='true' value=''></td></tr>
+<tr><td><b>MQTT fingerprint:<a href='#mqttfingerprint' data-rel='popup' data-role='button' data-inline='true' data-transition='pop' data-icon='info' data-theme='c' data-iconpos='notext'>Learn more</a><div data-role='popup' id='mqttgingerprint' class='ui-content' data-theme='b' style='max-width:320px;'><p>Specify a mqtt fingerprint for mqtts connection</p></div></b></td><td><input type='text' size=64 maxlength=64 id='fing' data-mini='true' value='-'></td></tr>
 </table>
 <table>
 <tr><td colspan=4><b>Choose Notifications:</b></td></tr>
@@ -473,6 +474,7 @@ comm+='&bdmn='+encodeURIComponent($('#bdmn').val());
 comm+='&bprt='+$('#bprt').val();
 comm+='&iftt='+encodeURIComponent($('#iftt').val());
 comm+='&mqtt='+encodeURIComponent($('#mqtt').val());
+comm+='&fing='+encodeURIComponent($('#fing').val());
 if($('#cb_key').is(':checked')) {
 if(!$('#nkey').val()) {
 if(!confirm('New device key is empty. Are you sure?')) return;
@@ -525,6 +527,7 @@ $('#bdmn').val(jd.bdmn);
 $('#bprt').val(jd.bprt);
 $('#iftt').val(jd.iftt);
 $('#mqtt').val(jd.mqtt);
+$('#fing').val(jd.fing);
 $('#dvip').val(jd.dvip);
 $('#gwip').val(jd.gwip);
 $('#subn').val(jd.subn);
